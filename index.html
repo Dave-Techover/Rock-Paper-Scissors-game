@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock, Paper, Scissors</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Rock, Paper, Scissors</h1>
+		<h4>Can you beat me at this game? Try your luck :)</h4>
+
+		<div class="well">
+			<h2 id="result"></h2>
+			<div class="float-left">
+				<h5 id="you">You</h5>
+				<p id="player"></p>
+			</div>
+
+			<div class="float-right">
+				<h5 id="computer">Computer</h5>
+				<p id="comp"></p>
+			</div>
+
+			<span>VS</span>
+
+			<p id="score"><span id="player-score">0</span> - <span id="comp-score">0</span></p>
+			
+		</div>
+
+		<button class="btn btn-success btn-lg pick" id="rock">Rock</button>
+		<button class="btn btn-success btn-lg pick" id="paper">Paper</button>
+		<button class="btn btn-success btn-lg pick" id="scissors">Scissors</button>
+	</div>
+
+	<script type="text/javascript" src="scripts/lib/jquery.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

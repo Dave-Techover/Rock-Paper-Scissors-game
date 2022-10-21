@@ -1,0 +1,35 @@
+body{
+	background-image: linear-gradient(90deg, #6f0fed 10%, #2bc0e4 90%);
+	color: white !important;
+}
+
+div p{
+	font-size: 30px;
+	margin-top: 100px;
+}
+
+button.btn-success{
+	color: white;
+	margin: 50px 5px;
+}
+
+.container{
+	margin-top: 40px;
+	text-align: center;
+}
+
+.well{
+	padding: 5px 50px;
+	border-radius: 5px;
+	border: 1px solid #cdcdcd;
+	height: 300px;
+}
+
+.well span{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+#score{
+	margin-top: 100px;
+}
