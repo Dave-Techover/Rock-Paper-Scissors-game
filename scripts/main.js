@@ -4,10 +4,10 @@ const comp                =   $("#comp"),
       computer            =   $("#computer"),
       playerScoreDisplay  =   $("#player-score"),
       compScoreDisplay    =   $("#comp-score"), 
-	result              =   $("#result"),
-	pickBtn             =   $(".pick"),
-	restartBtn          =   $("#restart"),
-	playAgainBtn        =   $("#play-again");
+	  result              =   $("#result"),
+	  pickBtn             =   $(".pick"),
+	  restartBtn          =   $("#restart"),
+	  playAgainBtn        =   $("#play-again");
 
 var playerScore = 0,
     compScore   = 0,
