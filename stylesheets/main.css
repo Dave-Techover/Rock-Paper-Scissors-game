@@ -5,9 +5,21 @@ body{
 	/*color: white; for dark mode*/
 }
 
+footer{
+	margin-top: 30px;
+}
+
+footer span{
+  margin: 0 10px ;
+}
+
+footer span a{
+  color: #000000;
+}
+
 button.btn-success{
 	color: white;
-	margin: 50px 5px;
+	margin: 40px 5px;
 }
 
 .container-sm{
@@ -48,7 +60,7 @@ button.btn-success{
 
 #play-again{
 	display: none;
-	margin: 50px 5px;
+	margin: 40px 5px;
 }
 
 #restart{
@@ -56,6 +68,10 @@ button.btn-success{
 }
 
 @media only screen and (max-width: 768px) {
+	footer{
+		text-align: center;
+	}
+
 	.well{
 		padding: 5px;
 		border-radius: 5px;
