@@ -1,6 +1,13 @@
 body{
 	/*background-image: linear-gradient(90deg, #6f0fed 10%, #2bc0e4 90%);*/
-	background-color: #e3e3e3;
+	background-color: #f7f7f7 !important;
+	/*background-color: #2a2a2a !important; for dark-mode*/
+	/*color: white; for dark mode*/
+}
+
+button.btn-success{
+	color: white;
+	margin: 50px 5px;
 }
 
 .container-sm{
@@ -18,22 +25,25 @@ body{
 
 .well span{
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 30px;
 }
+
+#player, #comp{
+	font-size: 35px;
+	margin-top: 100px;
+}
+
+#you, #computer{
+	font-size: 30px;
+}
+
+#result{
+		font-size: 32px;
+	}
 
 #score{
 	margin-top: 100px !important;
 	width: 950px !important;
-}
-
-#player, #comp{
-	font-size: 30px;
-	margin-top: 100px;
-}
-
-button.btn-success{
-	color: white;
-	margin: 50px 5px;
 }
 
 #play-again{
@@ -46,6 +56,31 @@ button.btn-success{
 }
 
 @media only screen and (max-width: 768px) {
+	.well{
+		padding: 5px;
+		border-radius: 5px;
+		border: 1px solid #cdcdcd;
+		height: 300px;
+	}
+
+	.well span{
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	#player, #comp{
+		font-size: 30px;
+		margin-top: 100px;
+	}
+
+	#you, #computer{
+		font-size: 25px;
+	}
+
+	#result{
+		font-size: 25px;
+	}
+
 	#score{
 		font-weight: bold;
 		font-size: 25px;

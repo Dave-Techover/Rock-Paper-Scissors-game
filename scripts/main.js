@@ -53,7 +53,9 @@ const restart = () => {
 	player.html("");
 	comp.html("");
 	you.css("color", "#000");
-	computer.css("color", "#000");	
+	computer.css("color", "#000");
+	playerScoreDisplay.css("color", "#000");
+	compScoreDisplay.css("color", "#000");	
 }
 
 const playAgain = () => {
@@ -80,77 +82,77 @@ const showResult = () => {
 			result.html(tie);
 			result.css("color", "gray");
 			you.css("color", "#000");
-			you.css("fontSize", "20px");
 			computer.css("color", "#000");
-			computer.css("fontSize", "20px");
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#000");
+			compScoreDisplay.css("color", "#000");
 
 		}else if(playerAnswer === "Rock"     &&  compAnswer === "Paper"){
 			result.html(loss);
 			result.css("color", "#e91616");
 			you.css("color", "#000");
-			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
-			computer.css("fontSize", "30px");
 			compScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#000");
+			compScoreDisplay.css("color", "#3bed0f");
 
 		}else if(playerAnswer === "Rock"     &&  compAnswer === "Scissors"){
 			result.html(win);
 			result.css("color", "#3bed0f");
 			you.css("color", "#3bed0f");
-			you.css("fontSize", "30px");
 			computer.css("color", "#000");
-			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#3bed0f");
+			compScoreDisplay.css("color", "#000");
 
 		}else if(playerAnswer === "Paper"    &&  compAnswer === "Scissors"){
 			result.html(loss);
 			result.css("color", "#e91616");
 			you.css("color", "#000");
-			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
-			computer.css("fontSize", "30px");
 			compScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#000");
+			compScoreDisplay.css("color", "#3bed0f");
 
 		}else if(playerAnswer === "Paper"    &&  compAnswer === "Rock"){
 			result.html(win);
 			result.css("color", "#3bed0f")
 			you.css("color", "#3bed0f");
-			you.css("fontSize", "30px");
 			computer.css("color", "#000");
-			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#3bed0f");
+			compScoreDisplay.css("color", "#000");
 
 		}else if(playerAnswer === "Scissors" &&  compAnswer === "Rock"){
 			result.html(loss);
 			result.css("color", "#e91616");
 			you.css("color", "#000");
-			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
-			computer.css("fontSize", "30px");
 			compScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#000");
+			compScoreDisplay.css("color", "#3bed0f");
 
 		}else if(playerAnswer === "Scissors" &&  compAnswer === "Paper"){
 			result.html(win);
 			result.css("color", "#3bed0f");
 			you.css("color", "#3bed0f");
-			you.css("fontSize", "30px");
 			computer.css("color", "#000");
-			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
+			playerScoreDisplay.css("color", "#3bed0f");
+			compScoreDisplay.css("color", "#000");
 		}
 
 		winner();
