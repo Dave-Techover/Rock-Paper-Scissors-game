@@ -7,9 +7,9 @@ const comp                =   $("#comp"),
 	  result              =   $("#result");
 
 var playerScore = 0,
-	compScore   = 0,
-	playerWin   =  "Congratulations, You Won !!!",
-	compWin     =  "Computer Wins, better luck next time!!!";
+    compScore   = 0,
+    playerWin   =  "Congratulations, You Won !!!",
+    compWin     =  "Computer Wins, better luck next time!!!";
 
 const compPick = () => {
 	var num = Math.floor(Math.random() * 3);
@@ -35,6 +35,16 @@ const winner = () => {
 	}
 }
 
+const restart = () => {
+	playerScore = 0;
+	compScore   = 0;
+	playerScoreDisplay.html(playerScore);
+	compScoreDisplay.html(compScore);
+	result.html("");
+	you.css("color", "#000");
+	computer.css("color", "#000");	
+}
+
 const showResult = () => {
 
 	$(".pick").on("click", function(){
@@ -50,18 +60,18 @@ const showResult = () => {
 
 		if(playerAnswer === compAnswer){
 			result.html(tie);
-			result.css("color", "#e9e9e9");
-			you.css("color", "white");
+			result.css("color", "gray");
+			you.css("color", "#000");
 			you.css("fontSize", "20px");
-			computer.css("color", "white");
+			computer.css("color", "#000");
 			computer.css("fontSize", "20px");
 			playerScoreDisplay.html(playerScore);
 			compScoreDisplay.html(compScore);
 
 		}else if(playerAnswer === "Rock"     &&  compAnswer === "Paper"){
 			result.html(loss);
-			result.css("color", "red");
-			you.css("color", "white");
+			result.css("color", "#e91616");
+			you.css("color", "#000");
 			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
 			computer.css("fontSize", "30px");
@@ -74,7 +84,7 @@ const showResult = () => {
 			result.css("color", "#3bed0f");
 			you.css("color", "#3bed0f");
 			you.css("fontSize", "30px");
-			computer.css("color", "white");
+			computer.css("color", "#000");
 			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
@@ -82,8 +92,8 @@ const showResult = () => {
 
 		}else if(playerAnswer === "Paper"    &&  compAnswer === "Scissors"){
 			result.html(loss);
-			result.css("color", "red");
-			you.css("color", "white");
+			result.css("color", "#e91616");
+			you.css("color", "#000");
 			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
 			computer.css("fontSize", "30px");
@@ -96,7 +106,7 @@ const showResult = () => {
 			result.css("color", "#3bed0f");
 			you.css("color", "#3bed0f");
 			you.css("fontSize", "30px");
-			computer.css("color", "white");
+			computer.css("color", "#000");
 			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
@@ -104,8 +114,8 @@ const showResult = () => {
 
 		}else if(playerAnswer === "Scissors" &&  compAnswer === "Rock"){
 			result.html(loss);
-			result.css("color", "red");
-			you.css("color", "white");
+			result.css("color", "#e91616");
+			you.css("color", "#000");
 			you.css("fontSize", "20px");
 			computer.css("color", "#3bed0f");
 			computer.css("fontSize", "30px");
@@ -118,7 +128,7 @@ const showResult = () => {
 			result.css("color", "#3bed0f");
 			you.css("color", "#3bed0f");
 			you.css("fontSize", "30px");
-			computer.css("color", "white");
+			computer.css("color", "#000");
 			computer.css("fontSize", "20px");
 			playerScore += 1;
 			playerScoreDisplay.html(playerScore);
@@ -128,5 +138,9 @@ const showResult = () => {
 		winner();
 	});
 }
+
+$("#restart").on("click", function() {
+	restart();
+});
 
 showResult();
