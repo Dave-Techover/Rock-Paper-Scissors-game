@@ -4,7 +4,10 @@ const comp                =   $("#comp"),
       computer            =   $("#computer"),
       playerScoreDisplay  =   $("#player-score"),
       compScoreDisplay    =   $("#comp-score"), 
-	  result              =   $("#result");
+	result              =   $("#result"),
+	pickBtn             =   $(".pick"),
+	restartBtn          =   $("#restart"),
+	playAgainBtn        =   $("#play-again");
 
 var playerScore = 0,
     compScore   = 0,
@@ -28,10 +31,16 @@ const winner = () => {
 		result.html(playerWin);
 		playerScore = 0;
 		compScore   = 0;
+		pickBtn.hide();
+		restartBtn.hide()
+		playAgainBtn.show();
 	}else if(compScore === 10){
 		result.html(compWin);
 		playerScore = 0;
 		compScore   = 0;
+		pickBtn.hide();
+		restartBtn.hide();
+		playAgainBtn.show();
 	}
 }
 
@@ -41,13 +50,22 @@ const restart = () => {
 	playerScoreDisplay.html(playerScore);
 	compScoreDisplay.html(compScore);
 	result.html("");
+	player.html("");
+	comp.html("");
 	you.css("color", "#000");
 	computer.css("color", "#000");	
 }
 
+const playAgain = () => {
+	restart();
+	pickBtn.show();
+	restartBtn.show();
+	playAgainBtn.hide();
+}
+
 const showResult = () => {
 
-	$(".pick").on("click", function(){
+	pickBtn.on("click", function(){
 		compPick();
 
 		var playerAnswer =  $(this).html(),
@@ -103,7 +121,7 @@ const showResult = () => {
 
 		}else if(playerAnswer === "Paper"    &&  compAnswer === "Rock"){
 			result.html(win);
-			result.css("color", "#3bed0f");
+			result.css("color", "#3bed0f")
 			you.css("color", "#3bed0f");
 			you.css("fontSize", "30px");
 			computer.css("color", "#000");
@@ -139,8 +157,12 @@ const showResult = () => {
 	});
 }
 
-$("#restart").on("click", function() {
+restartBtn.on("click", function() {
 	restart();
+});
+
+playAgainBtn.on("click", function() {
+	playAgain();
 });
 
 showResult();

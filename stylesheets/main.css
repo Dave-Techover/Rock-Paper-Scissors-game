@@ -3,9 +3,10 @@ body{
 	background-color: #e3e3e3;
 }
 
-.container{
+.container-sm{
 	margin-top: 40px;
 	text-align: center;
+	padding: 0 !important;
 }
 
 .well{
@@ -21,10 +22,8 @@ body{
 }
 
 #score{
-	font-weight: bold;
-	font-size: 25px;
-	margin-top: 100px;
-	width: 535px;
+	margin-top: 100px !important;
+	width: 950px !important;
 }
 
 #player, #comp{
@@ -37,7 +36,20 @@ button.btn-success{
 	margin: 50px 5px;
 }
 
+#play-again{
+	display: none;
+	margin: 50px 5px;
+}
+
 #restart{
-	margin: 0 auto;
 	background-color: #e3e3e3 !important;
+}
+
+@media only screen and (max-width: 768px) {
+	#score{
+		font-weight: bold;
+		font-size: 25px;
+		margin-top: 100px !important;
+		width: 295px !important;
+	}
 }

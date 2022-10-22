@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rock, Paper, Scissors</title>
+	<meta name="author" content="David Owoeye">
+  	<meta name="description" content="Rock Paper Scissors game made with HTML, CSS and javascript">
+  	<meta name="keywords" content="rock paper scissors, game, fun, HTML, CSS, javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- title -->
+	<title>Rock Paper Scissors</title>
+	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap/bootstrap.min.css">
 </head>
 <body>
-	<div class="container">
-		<h1>Rock, Paper, Scissors</h1>
+	<div class="container-sm">
+		<h1>Rock Paper Scissors</h1>
 		<h4>Can you beat me at this game? :)</h4>
 		<p>First to 10, wins!!!</p>
 
@@ -26,15 +33,17 @@
 			</div>
 
 			<span>VS</span>
-
-			<p id="score"><span id="player-score">0</span> - <span id="comp-score">0</span></p>
+			<br>
+			<span id="score"><span id="player-score">0</span> - <span id="comp-score">0</span></span>
 			
 		</div>
 
 		<button class="btn btn-success btn-lg pick" id="rock">Rock</button>
 		<button class="btn btn-success btn-lg pick" id="paper">Paper</button>
 		<button class="btn btn-success btn-lg pick" id="scissors">Scissors</button>
-		<button class="btn btn-warning btn-xs d-block" id="restart">Restart</button>
+		<button class="btn btn-info btn-lg" id="play-again">Play Again</button>
+		<br>
+		<button class="btn btn-warning btn-xs" id="restart">Restart</button>
 	</div>
 
 	<script type="text/javascript" src="scripts/lib/jquery.js"></script>
