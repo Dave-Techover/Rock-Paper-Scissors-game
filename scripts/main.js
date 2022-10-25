@@ -9,13 +9,13 @@ const comp                =   $("#comp"),
 	  restartBtn          =   $("#restart"),
 	  playAgainBtn        =   $("#play-again");
 
-var playerScore = 0,
+let playerScore = 0,
     compScore   = 0,
     playerWin   =  "Congratulations, You Won !!!",
     compWin     =  "Computer Wins, better luck next time!!!";
 
 const compPick = () => {
-	var num = Math.floor(Math.random() * 3);
+	let num = Math.floor(Math.random() * 3);
  
 	if(num === 0){
 		comp.html("Rock");
@@ -70,7 +70,7 @@ const showResult = () => {
 	pickBtn.on("click", function(){
 		compPick();
 
-		var playerAnswer =  $(this).html(),
+		let playerAnswer =  $(this).html(),
 		    compAnswer   =  comp.html(),
 		    win          =  "Nice one :) !!",
 		    tie          =  "It's a TIE :|",
