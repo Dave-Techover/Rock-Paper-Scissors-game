@@ -14,6 +14,9 @@ let playerScore = 0,
     playerWin   =  "Congratulations, You Won !!!",
     compWin     =  "Computer Wins, better luck next time!!!";
 
+playerScoreDisplay.html(playerScore);
+compScoreDisplay.html(compScore);
+
 const compPick = () => {
 	let num = Math.floor(Math.random() * 3);
  
