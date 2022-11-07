@@ -11,9 +11,9 @@ const comp                =   $("#comp"),
 
 let playerScore = 0,
     compScore   = 0,
-    playerWin   =  "Congratulations, You Won !!!",
-    compWin     =  "Computer Wins, better luck next time!!!";
-
+    playerWin   = "Congratulations, You Won !!!",
+    compWin     = "Computer Wins, better luck next time!!!";
+    
 playerScoreDisplay.html(playerScore);
 compScoreDisplay.html(compScore);
 
