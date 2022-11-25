@@ -13,7 +13,7 @@ let playerScore = 0,
     compScore   = 0,
     playerWin   = "Congratulations, You Won !!!",
     compWin     = "Computer Wins, better luck next time!!!";
-    
+
 playerScoreDisplay.html(playerScore);
 compScoreDisplay.html(compScore);
 
@@ -171,3 +171,31 @@ playAgainBtn.on("click", function() {
 });
 
 showResult();
+
+
+// TO TOGGLE BETWEEN TWO FUNCTIONS USING A BUTTON
+
+// <button id="buttonId">Click me!!!</button>
+
+//Set click to "false" initially. No function perfomed yet
+var click = false;
+
+document.getElementById("buttonId").addEventListener("click", function() {
+	if ( clicked === false) {
+	 	console.log("The button has now been clicked, perform the first function");
+	 	// insert function here
+
+	 	// set click from "false" to "true" to indicate that the first function has been performed.
+		click = true
+
+		//When, the button is clicked again, the other function will be performed.
+	}else{
+		console.log("The button has been clicked again, perform the other function");
+		// insert other function here
+
+		// set click back to "false" after the other function has been performed
+		click = false
+
+		//Now, when the button is clicked again,  the first function will be performed.
+	}
+});
